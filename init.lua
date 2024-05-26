@@ -20,6 +20,7 @@ skyboard:createegg("item","Skyboard","item.png",
   end
 )
 
+
 skyboard:createcraft("item",{
     {"","",""},
     {"default:steel_ingot","default:bronze_ingot","default:steel_ingot"},
