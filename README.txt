@@ -6,7 +6,7 @@
     MIT 
     
   Current version of mod.
-    a0.1
+    2
   
   How to install the mod.
     copy this folder to mods dir in minetest
