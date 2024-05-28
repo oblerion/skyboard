@@ -16,13 +16,17 @@ function modlib:getname()
 end
 
 function modlib:createblock(pname,pdesc,ptiles,pgroups,psounds,pdrop)
+  local ldrop = ""
+  if pdrop then
+    ldrop = self:getname()..":"..pdrop
+  end
 	minetest.register_node(self:getname()..":"..pname, 
 	{
     description = pdesc,
     tiles = {self:getname().."_"..ptiles}, --{mod_name.."_block1.png"},
     groups = pgroups,
     sounds = psounds,
-    drop = pdrop or ""
+    drop = ldrop
 	}
 	)
 end
