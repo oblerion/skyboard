@@ -1,12 +1,23 @@
 -- lib for help to create mod
 
+function mt_ifnodeair(px,py,pz)
+  local v = vector.new(px,py,pz)
+  local name = minetest.get_node(v).name
+  return  name == "air" 
+end
+
+function mt_itemexist(sitem)
+  if minetest.registered_items[sitem] then return true end
+  return false
+end
+
 function modlib_createmod()
 
 local modlib = {
 	mod_name=""
 }
 
-function modlib:set_modname(name)
+function modlib:setname(name)
 	self.mod_name=name
 	minetest.log("Start mod "..self:getname())
 end
@@ -79,6 +90,7 @@ function modlib:createentity(pname,pmesh,ptexture,pcolbox,pfunc_rclick,pfunc_ste
       mesh = modlib:getname().."_"..pmesh,
       textures = {modlib:getname().."_"..ptexture},
     }, 
+    collide_with_objects = true,
     physical = true,
     collisionbox = pcolbox,
     selectionbox = {
