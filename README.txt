@@ -3,7 +3,8 @@
     add skyboard vehicle with block and crafting
   
   What the license is.
-    MIT 
+  script: MIT 
+  media: Apache 2.0
     
   Current version of mod.
     2
