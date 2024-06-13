@@ -17,4 +17,4 @@
     - can work with minetest or mineclone game
   
   Where to report problems/bugs or get help.
-    https://oblerion.itch.io/skyboard-minetest
+  https://github.com/oblerion/skyboard
