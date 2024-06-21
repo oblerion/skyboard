@@ -1,1 +1,1 @@
-add skyboard flying vehicle with block and crafting
+add skyboard flying vehicle with crafting
