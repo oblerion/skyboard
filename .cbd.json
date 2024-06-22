@@ -1,0 +1,17 @@
+{
+	"title": "Skyboard",
+	"name": "skyboard",
+	"type": "MOD",
+	"dev_state": "WIP",
+	"tags": ["transport"],
+	"content_warnings": [],
+	"license": "MIT",
+	"media_license": "Apache-2.0",
+	"forums": 30565,
+	"repo": "https://github.com/oblerion/skyboard",
+	"issue_tracker": "https://github.com/oblerion/skyboard",
+	"website": "https://oblerion.itch.io/skyboard-minetest",
+	"donate_url": "https://oblerion.itch.io/skyboard-minetest",
+	"short_description": "add skyboard flying vehicle with crafting",
+	"long_description": "texture, mesh and script by oblerion"
+}
