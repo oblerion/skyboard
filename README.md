@@ -2,13 +2,13 @@
 # What the mod does.
 add skyboard vehicle with crafting
 
-# Controls
+# Controls.
  up/down -> move forward/backward to player look
 
 # What the license is.
 ## script: 
 MIT 
-## media: 
+## media:
 Apache 2.0
 
 # Current version of mod.
