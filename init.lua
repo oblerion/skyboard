@@ -110,23 +110,6 @@ local function _board_Sfall(pobj,pcolbox)
 	pobj.object:set_pos(position)
 end
 
---local function _board_Sjump(pobj,pcolbox)
-	--local velocity = vector.new(0, 0, 0)
-	--local driver = _board_getdriver(pobj.object)
-	--local position = pobj.object:get_pos()
-	--if driver then
-	    --local controls = driver:get_player_control()
-		--local ahor = driver:get_look_horizontal()+math.rad(90)
-		--if controls.jump then
-			--if NotCollide_Horx2(position,ahor,pcolbox)==false and
-				--NotCollide_Vert(position,ahor,3)then
-				--velocity.y = velocity.y + 0.5
-			--end
-		--end
-	--end
-	--position = vector.add(position,velocity)
-	--pobj.object:set_pos(position)
---end
 local function _board_Lfall(pobj,pcolbox)
 	local velocity = vector.new(0, 0, 0)
 	local driver = _board_getdriver(pobj.object)
@@ -164,21 +147,6 @@ local function _board_controls(pobj,pcolbox)
       velocity.z = velocity.z + math.sin(ahor) * (-5 * 0.05)
       velocity.x = velocity.x + math.cos(ahor) * (-5 * 0.05)
     end
---if controls.left and NotCollide_Hor(position,ahor+math.rad(90),pcolbox) then
---velocity.z = velocity.z + math.sin(ahor+math.rad(90)) * (5 * 0.05)
---velocity.x = velocity.x + math.cos(ahor+math.rad(90)) * (5 * 0.05)
---elseif controls.right and NotCollide_Hor(position,ahor-math.rad(90),pcolbox) then
---velocity.z = velocity.z + math.sin(ahor+math.rad(90)) * (-5 * 0.05)
---velocity.x = velocity.x + math.cos(ahor+math.rad(90)) * (-5 * 0.05)
---end
-
---    if controls.sneak and 
---    mt_ifnodeair(position.x+velocity.x ,position.y-1,position.z+velocity.z)==true then
---      velocity.y = velocity.y - 1
---    elseif controls.jump and 
---    mt_ifnodeair(position.x+velocity.x ,position.y+1,position.z+velocity.z) then
---      velocity.y = velocity.y + 1
---    end
 
     position = vector.add(position,velocity)
     pobj.object:set_rotation(vector.new(0,ahor,0))
@@ -191,7 +159,6 @@ end
 local function _board_fstep_S(self,dtime)
 	if _board_controls(self,mesh_size_S) then
 		_board_Sfall(self,mesh_size_S)
-		--_board_Sjump(self,mesh_size_S)
 	else
 		_board_gravity(1,self)
 	end
