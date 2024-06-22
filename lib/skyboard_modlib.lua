@@ -1,16 +1,5 @@
 -- lib for help to create mod
 
-function mt_ifnodeair(px,py,pz)
-  local v = vector.new(px,py,pz)
-  local name = minetest.get_node(v).name
-  return  name == "air" 
-end
-
-function mt_itemexist(sitem)
-  if minetest.registered_items[sitem] then return true end
-  return false
-end
-
 function modlib_createmod()
 
 local modlib = {
@@ -24,6 +13,10 @@ end
 
 function modlib:getname()
 	return self.mod_name
+end
+
+function modlib:lib(pname)
+  return dofile(minetest.get_modpath(self:getname()).."/lib/"..self:getname().."_"..pname..".lua")
 end
 
 function modlib:createblock(pname,pdesc,ptiles,pgroups,psounds,pdrop)
